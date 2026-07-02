@@ -3,5 +3,4 @@
 *~.xml
 
 # Dynamic plugins .dll
-bin/
-DS.Store
+bin/.DS_Store
