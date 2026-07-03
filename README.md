@@ -60,13 +60,7 @@ The objectives of this project were to:
 
 # Technologies Used
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Joblib
-- Jupyter Notebook
-
+See requirements.txt
 ---
 
 # Installation
@@ -74,7 +68,7 @@ The objectives of this project were to:
 Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone <git@github.com:Gunay-Bayramova/immoeliza_ml.git>
 ```
 
 Install dependencies
@@ -82,6 +76,8 @@ Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
+
+After cloning the repository, run python src/train.py to generate the trained model files in the models/ directory.
 
 ---
 # Dataset
