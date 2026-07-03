@@ -4,3 +4,4 @@
 
 # Dynamic plugins .dll
 bin/.DS_Store
+__pycache__/
