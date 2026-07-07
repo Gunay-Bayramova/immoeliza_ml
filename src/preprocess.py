@@ -11,17 +11,20 @@ def load_and_preprocess_data(filepath):
     df = pd.read_csv(filepath)
 
     columns_to_drop = [
-        "id",
-        "locality",
-        "subproperty_type",
-        "equipped_kitchen",
-        "open_fire",
+        "seller_id",
+        "transaction_type",
+        "street",
+        "street_number",
+        "postal_code",
+        "balcony",
         "swimming_pool",
-        "flood_zone",
+        "availability",
+        "furnished",
+        "energy_consumption",
         "garden",
         "terrace",
-        "surface_of_the_plot",
-    ]
+        "garage"
+     ]
 
     df = df.drop(columns=columns_to_drop, errors="ignore")
 

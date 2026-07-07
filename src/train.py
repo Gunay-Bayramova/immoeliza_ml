@@ -11,7 +11,7 @@ from sklearn.tree import DecisionTreeRegressor
 
 import joblib
 
-#load the data and preprocess it
+# Load the data and preprocess it
 X, y = load_and_preprocess_data("../data/SaleCleanForAnalysis.csv")
 
 # Split the data into training and testing sets
@@ -57,12 +57,12 @@ random_forest_pipeline = Pipeline([
     ("model", RandomForestRegressor(random_state=42))
 ])
 
-#Train the models
+# Train the models
 linear_pipeline.fit(X_train, y_train)
 decision_tree_pipeline.fit(X_train, y_train)
 random_forest_pipeline.fit(X_train, y_train)    
 
-#Save the trained models using joblib
+# Save the trained models using joblib
 joblib.dump(linear_pipeline, "../models/linear_regression_model.joblib")
 joblib.dump(decision_tree_pipeline, "../models/decision_tree_model.joblib")
 joblib.dump(random_forest_pipeline, "../models/random_forest_model.joblib") 
