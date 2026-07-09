@@ -95,7 +95,7 @@ The dataset contains information about Belgian residential properties:
 ## Missing values	Decision
 < 20%	Keep and impute (fill missing values)
 20–60%	Keep only if the feature is important 
-> 60%	Drop the column
+Above 60%	Drop the column
 
 ## kept: 
 price (target)
@@ -142,6 +142,13 @@ The following columns were removed before training the model:
 - energy_consumption: Approximately 75% missing values, making imputation unreliable.
 
 ---
+
+# Outlier Removal 
+
+the following listing were removed before data preprossesing
+
+- listings equal/above 8 millions euros (lots of missing values, very few information with etremly high price)
+- listings prices below €10,000" (Six rows out of ~9,700 (0.06%) — cheap to remove, poisonous to keep, since a €2,500 "mansion" pulls your model's understanding of what mansions cost in absurd directions.)
 
 # Data Preprocessing
 
@@ -216,6 +223,10 @@ Cross-validation (5-fold):
 - Standard deviation ≈ **0.13**
 
 These results indicate that the Random Forest model provides the best predictive performance while still showing some degree of overfitting.
+
+Decision Tree: 0.9999 → 0.11 — catastrophic overfit. Memorized every training house, learned almost nothing general.
+Random Forest: 0.95 → 0.73 — real gap, so yes, overfitting — but the test score is the best in the table. An imperfect model can still be the most useful one.
+XGBoost: 0.97 → 0.71 — same story as RF, slightly worse test.
 
 ---
 
