@@ -5,5 +5,4 @@
 # Dynamic plugins .dll
 bin/.DS_Store
 __pycache__/
-# Trained models
-models/*.joblib
+DS_Store
